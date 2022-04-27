@@ -1,0 +1,15 @@
+{
+  "name": "automate-web-workshop",
+  "version": "1.0.0",
+  "description": "A Cypress workshop to make an introduction to future programmers about web automation",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run",
+    "test:open": "cypress open"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^9.6.0"
+  }
+}
