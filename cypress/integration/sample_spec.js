@@ -6,10 +6,12 @@ describe('My First Test', () => {
 
     cy.url().should('include', 'id_category=5')
 
-    cy.get('#center_column > ul > li > div > div.right-block > div.button-container > a.button.ajax_add_to_cart_button.btn.btn-default')
+    // Botón de agregar al carrito (Add to cart)
+    cy.get('')
       .click()
 
-    cy.get('#layer_cart > div.clearfix > div.layer_cart_cart.col-xs-12.col-md-6 > div.button-container > a')
+    // Complete con continuar procedimiento (Proceed to checkout)
+    cy.get('')
       .click()
 
     cy.get('#center_column > p.cart_navigation.clearfix > a.button.btn.btn-default.standard-checkout.button-medium')
@@ -21,25 +23,30 @@ describe('My First Test', () => {
     cy.get('#passwd')
       .type('icesi123')
 
-    cy.get('#SubmitLogin')
+    // Iniciar sesión botón (Login)
+    cy.get('')
       .click()
 
+    
     cy.get('#center_column > form > p > button')
       .click()
-      
-    cy.get('#cgv')
+    
+    //Aceptar terminos y condiciones (terms of service)  
+    cy.get('')
       .click()
 
     cy.get('#form > p > button > span')
       .click()
-
+    
     cy.get('#HOOK_PAYMENT > div:nth-child(1) > div > p > a')
       .click()
-
-    cy.get('#cart_navigation > button')
+    
+    // Completar pedido (Complete my order)
+    cy.get('')
       .click()
 
+    // Corregir la verificación con el texto correcto
     cy.get('#center_column > div > p > strong')
-      .should('have.text', 'Your order on My Store is complete.')
+      .should('have.text', 'Your order is complete.')
   })
 })
